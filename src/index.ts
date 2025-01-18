@@ -25,7 +25,7 @@ try {
     username = args[1].toString();
     command = args[2] ?? 'show-activity';
 
-    if(!command.startsWith('--')) throw new Error('Invalid command. Try --help');
+    if (!command.startsWith('--')) throw new Error('Invalid command. Try --help');
     command = command.slice(2,);
 
     switch (command) {
@@ -64,12 +64,12 @@ try {
                                 console.log(`| Event ${element.type} at ${new Date(element.created_at).getDate()}/${new Date(element.created_at).getMonth() + 1}`)
                                 console.log('| With commits:');
                                 element.payload.commits.forEach(commit => {
-                                    console.log(`| -> ${commit.message.replace(/\n/g,' ')} #${commit.sha}`);
+                                    console.log(`| -> ${commit.message.replace(/\n/g, ' ')} #${commit.sha}`);
                                 });
                                 console.log(' --------------------------------------------------------------------------------');
                                 break;
                             case 'WatchEvent':
-                                console.log(`| Event ${element.type} at ${new Date(element.created_at).getDate()}/${new Date(element.created_at).getMonth() + 1} -> \u001b]8;;${element.repo.url.replace('https://api.github.com/repos/','https://github.com/')}\u0007 -- ${element.repo.name} -- \u001b]8;;\u0007 has been starred `);
+                                console.log(`| Event ${element.type} at ${new Date(element.created_at).getDate()}/${new Date(element.created_at).getMonth() + 1} -> \u001b]8;;${element.repo.url.replace('https://api.github.com/repos/', 'https://github.com/')}\u0007 -- ${element.repo.name} -- \u001b]8;;\u0007 has been starred `);
                                 console.log(' --------------------------------------------------------------------------------');
                                 break;
                         }
