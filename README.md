@@ -1,9 +1,9 @@
 # Github user activity project
-This project is meant to be a basic task administrator using the CLI. The commands are not too intuituve or even it has lack of proactivity, but it just pretended to be educational. 
+This project is meant to be a basic task administrator using the CLI. The commands are not too intuituve or even it has lack of proactivity, but it just pretended to be educational. This project comes from the list of mini projects given by [Roadmap.sh]('https://roadmap.sh/projects/github-user-activity')
 
 ## Usage
 
-##### *github-activity --username \<username> \<command>*\
+##### *github-activity --username \<username> \<command>*
 It has to be in this format, where the first argument is the --username after the respective username you want to know the activity.
 If you don specify the command, it will show just the general activity. I have in mind to ask a filter for the different types of activities. It will be soon.
 
